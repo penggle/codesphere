@@ -38,6 +38,13 @@
 
     <dependencyManagement>
         <dependencies>
+            <!-- xmodule2-examples-security-common -->
+            <dependency>
+                <groupId>com.penglecode</groupId>
+                <artifactId>xmodule2-examples-security-common</artifactId>
+                <version>${project.version}</version>
+            </dependency>
+
             <!-- xmodule2-examples-common -->
             <dependency>
                 <groupId>com.penglecode</groupId>
@@ -242,8 +249,8 @@
     </profiles>
 
     <modules>
-
-        <module>xmodule2-examples-springboot</module>
         <module>xmodule2-examples-common</module>
+        <module>xmodule2-examples-springboot</module>
+        <module>xmodule2-examples-security</module>
     </modules>
 </project>

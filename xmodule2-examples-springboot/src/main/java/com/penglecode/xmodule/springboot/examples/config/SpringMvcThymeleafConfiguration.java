@@ -16,6 +16,7 @@ public class SpringMvcThymeleafConfiguration implements WebMvcConfigurer {
     /**
      * 在不考虑内容协商(ContentNegotiationManager)的情况下，我们希望：
      * 请求【/index】和【/index.html】都能进入到相应的HandlerMethod中
+     * 或者通过配置项[spring.mvc.pathmatch.use-suffix-pattern=true]来进行配置
      */
     @Override
     public void configurePathMatch(PathMatchConfigurer configurer) {

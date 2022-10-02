@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="renderer" content="webkit">
+    <title>index</title>
+    <link rel="icon" th:href="@{/img/favicon.png}" type="image/x-icon"/>
+</head>
+<body>
+    <h1>User Login</h1>
+    <div>
+        <form id="loginForm" name="loginForm" th:action="@{/login}" method="post" onsubmit="return checkLoginForm()">
+            <div>
+                <p th:if="${error}" th:text="${message}"></p>
+            </div>
+            <div>
+                <label>用户名：</label><input type="text" name="username"/>
+            </div>
+            <div>
+                <label>密&nbsp;码：</label><input type="password" name="password"/>
+            </div>
+            <div>
+                <button>立即登录</button>
+            </div>
+        </form>
+    </div>
+</body>
+<script type="text/javascript">
+    function checkLoginForm() {
+        let loginForm = document.loginForm;
+        if(!loginForm.username.value) {
+            alert('请输入用户名!');
+            return false;
+        }
+        if(!loginForm.password.value) {
+            alert('请输入密码!');
+            return false;
+        }
+        return true;
+    }
+</script>
+</html>

@@ -6,7 +6,7 @@
 -->
 <configuration scan="true" scanPeriod="120 seconds">
     <!--SpringBoot应用名称-->
-    <springProperty scope="context" name="SPRING_APPLICATION_NAME" source="spring.application.name" defaultValue="xmodule2-examples-springboot"/>
+    <springProperty scope="context" name="SPRING_APPLICATION_NAME" source="spring.application.name" defaultValue="xmodule2-examples-security-simple1"/>
     <!-- SpringBoot日志模块的默认配置 -->
     <include resource="org/springframework/boot/logging/logback/defaults.xml" />
     <!-- 重新定义LOG_PATH默认值 -->
@@ -52,6 +52,7 @@
     <logger name="org.springframework.transaction" level="INFO"/>
     <logger name="org.springframework.jdbc" level="INFO"/>
     <logger name="org.springframework.http" level="DEBUG"/>
+    <logger name="org.springframework.security" level="DEBUG"/>
     <logger name="org.springframework.web" level="DEBUG"/>
     <logger name="org.springframework.core.codec" level="DEBUG"/>
     <logger name="org.springframework.core.io.support.SpringFactoriesLoader" level="TRACE"/>

@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="renderer" content="webkit">
+    <title>index</title>
+    <link rel="icon" th:href="@{/img/favicon.png}" type="image/x-icon"/>
+</head>
+<body>
+    <h1 th:text="${message}">Welcome!</h1>
+    <a th:href="@{/logout}" style="float:right;">退出登录</a>
+    <p th:text="${loginUser}"></p>
+    <ul>
+        <li><a th:href="@{/user/home}"/>User Home</li>
+        <li><a th:href="@{/admin/home}"/>Admin Home</li>
+        <li><a th:href="@{/anon/help}"/>User Help</li>
+    </ul>
+</body>
+</html>
