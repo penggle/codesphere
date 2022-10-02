@@ -8,6 +8,7 @@ import org.springframework.security.config.annotation.web.configuration.WebSecur
 
 /**
  * 简单Spring-Security示例配置
+ * 本示例为纯页面跳转示例，无Ajax异步请求
  *
  * @author peng2.peng
  * @version 1.0.0
